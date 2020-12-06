@@ -17,7 +17,7 @@ lib/
 |   `-- exit
 |-- string
 |   |-- strcmp
-|   `-- strlen
+|   `-- strlen (With max limit)
 `-- unistd
     |-- constants
     `-- getopt
