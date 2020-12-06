@@ -9,7 +9,7 @@ lib/
 |-- stdio
 |   |-- fputc
 |   |-- fputs
-|   |-- printf
+|   |-- printf (Under development)
 |   |-- putc
 |   |-- putchar
 |   `-- puts
