@@ -19,9 +19,9 @@ digraph Fullstack {
 
     ElfWithSymbols [shape="rectangle" label="Object file\n(main.o)\nELF format"];
     ExecutableElfWithSymbols [shape="rectangle" label="Executable with symbols\n(main.exe)\nELF format"];
-    gas [label="gnu as\n(Assembler)"];
-    ld  [label="gnu ld\n(Linker)"];
-    strip [label="gnu strip\n(Discards symbols)"];
+    gas [label="as\n(Assembler)"];
+    ld  [label="ld\n(Linker)"];
+    strip [label="strip\n(Discards symbols)"];
     // Edges
     
     gas -> ElfWithSymbols;
