@@ -1,0 +1,42 @@
+digraph Fullstack {
+    labelloc="t";
+    label="A life of a Executable";
+  subgraph cluster_0 {
+    style=filled;
+    color=lightgrey;
+    //node [style=filled,color=white];
+
+
+  }
+
+  subgraph cluster_1 {
+    node [style=filled];
+    label = "GNU binutils toolchain";
+    color=blue;
+    
+    node [shape="circle"];
+    // Nodes
+
+    ElfWithSymbols [shape="rectangle" label="Object file\n(main.o)\nELF format"];
+    ExecutableElfWithSymbols [shape="rectangle" label="Executable with symbols\n(main.exe)\nELF format"];
+    gas [label="as\n(Assembler)"];
+    ld  [label="ld\n(Linker)"];
+    strip [label="strip\n(Discards symbols)"];
+    // Edges
+    
+    gas -> ElfWithSymbols;
+    ElfWithSymbols -> ld;
+    ld -> ExecutableElfWithSymbols;
+    ExecutableElfWithSymbols -> strip;
+
+    
+  }
+    // Nodes
+    AssemblyCode [shape="rectangle" label="Code\n(main.s)\nASCII"];
+    StrippedElf [shape="rectangle" label="Executable without symbols\n(main.exe)\nELF format"];
+    
+    // Edges
+    AssemblyCode -> gas;
+    
+    strip -> StrippedElf;
+}
