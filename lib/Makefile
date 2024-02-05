@@ -1,4 +1,4 @@
-SHELL=/bin/bash
+SHELL=/bin/sh
 
 DISTFILE=libstd.a
 SRCDIR=./src
